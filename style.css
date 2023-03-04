@@ -3,15 +3,15 @@
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #d3d3d3;
+    background-color: #590002;
     box-sizing: border-box;
     margin: 25px;;
     padding: 25px;
 }
 
 main, section{
-    background-color: #590002;
-    color:antiquewhite; /*cor da fonte*/
+    background-color: #1f0001;
+    color:rgb(163, 103, 13); /*cor da fonte*/
 }
 
 ul{
@@ -23,14 +23,24 @@ ul{
 
 a:link, a:visited{
     display: inline-block;
-    color:blueviolet;
+    color:rgb(163, 103, 13);
     text-decoration: none;
     font-weight: bold;    
 }
 
-nav > div{
+nav div{
     display: inline-flex;
     margin: 15px;
+    
+}
+
+nav{
+    text-align: center;
+    background-color:#1f0001 ;
+}
+
+header{
+    background-color: #000000;
 }
 
 .container{
@@ -58,6 +68,61 @@ header{
 table{
     width: 100%;
 }
+
+
+tr:nth-child(4){
+    display: none;
+}
+
+
+
+td:last-child:not(tr:first-child td):before{
+    content: "R$ ";
+}
+
+nav > div:hover{
+    background-color: #590002;
+    padding-left: 85px;
+    padding-right: 95px;
+    transition: 850ms;
+    width: 95px;
+}
+
+tr:not(tr:first-child):hover{
+   background-color: var(--cores-vinho);
+}
+
+/* #590002 */
+
+address p:first-child:before{
+    content: "Rua: ";
+}
+
+address p:nth-child(2)::before{
+    content: "Bairro: ";
+}
+
+address p:last-child:after{
+    content: ", Santa Catarina.";
+}
+
+:root{
+    --cores-vinho: #590002;
+}
+
+header img{
+    filter: grayscale(80%);
+    transition: filter 1s;
+}
+
+header img:hover{
+    filter: grayscale(0);
+}
+
+
+
+
+
 /*
 * 
 Para esta atividade, você não deve alterar absolutamente nada o arquivo HTML.
